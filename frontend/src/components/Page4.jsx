@@ -1,8 +1,37 @@
- 
-function Page4() {
-  return (
-    <div>Page4</div>
-  )
-}
+import { Box, Text } from '@chakra-ui/react';
+import React from 'react';
 
-export default Page4
+const Page4 = () => {
+  const backgroundImageUrl = "https://cdn.pixabay.com/photo/2024/02/27/00/13/heliconia-8599119_1280.jpg";
+  const title = "Nature";
+  const content = "Page 4 content";
+
+  return (
+    <Box
+      backgroundImage={`url(${backgroundImageUrl})`}
+      height="100vh"
+      display="flex"
+      flexDirection="column"
+      justifyContent="center"
+      alignItems="center"
+      textAlign="center"
+      padding="20px"
+      color="grey"
+    >
+      <Text as="h1" fontSize="6xl" fontWeight="bold" color="yellow.300" mb={8}>
+        {title}
+      </Text>
+      <Box
+        background="rgba(0, 0, 0, 0.5)"
+        padding="20px"
+        borderRadius="md"
+      >
+        <Text fontSize="xl" color="cyan.200">
+          {content}
+        </Text>
+      </Box>
+    </Box>
+  );
+};
+
+export default Page4;

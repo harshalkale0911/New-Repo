@@ -1,16 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@chakra-ui/react';
+import { Button, Box, Heading } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
-    
   return (
-    <div style={{ textAlign: 'center',   }}>
-      <h1 style={{ fontSize: '3rem' }}>Create Your Book</h1>
+    <Box textAlign="center" mt="50px">
+      <Heading as="h1" size="2xl">BookBuilder </Heading>
       <Link to="/input-page">
-        <Button mt="4" colorScheme="teal"  >Start </Button>
+        <Button size="lg" mt="20px">Add Book</Button>
       </Link>
-    </div>
+    </Box>
   );
 };
 
